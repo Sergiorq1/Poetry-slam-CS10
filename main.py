@@ -1,12 +1,15 @@
 def get_file_lines(filename):
     #return a list of strings containing the lines of the file.
     file = open(filename, "r")
-    print(file.read())
-get_file_lines("Poem.txt") 
+    return (file.readlines())
+ 
 def lines_printed_backwards(lines_list):
     #print the lines of the poem in reverse. Include the original line number at the beginning of each line.
-    pass
-
+    print(file.readlines(lines_list))
+lines_printed_backwards(get_file_lines("Poem.txt"))
+    
+    
+lines_printed_backwards()
 def lines_printed_random(lines_list):
     #print the lines of your poem in randomly order. Repeats are ok, but make sure the number of lines printed is equal to the original lines in the poem (Line numbers do not need to be printed.) Hint: try using a loop and randint() from the random module
     pass
