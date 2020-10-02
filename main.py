@@ -31,9 +31,12 @@ def lines_printed_custom(lines_list):
         is_sorted = True
         #Defines how the index is going to loop. In this case, it will be every line of the poem minus the last line
         for line in range(len(lines_list)-1):
+            #If current line is greater than the next line
             if lines_list[line] > lines_list[line +1]:
                 is_sorted = False
+                #Switch the lines
                 (lines_list[line], lines_list[line + 1]) = (lines_list[line + 1], lines_list[line])
+        #Once every line is sorted, return the sorted list
         if is_sorted == True:
             return lines_list
 print(lines_printed_custom(get_file_lines("Poem.txt")))
