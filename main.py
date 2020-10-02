@@ -13,7 +13,7 @@ def lines_printed_backwards(lines_list):
         index = len(lines_list) - index
         print(index, item)
 
-# lines_printed_backwards(get_file_lines("Poem.txt"))
+lines_printed_backwards(get_file_lines("Poem.txt"))
 
 def lines_printed_random(lines_list):
     #print the lines of your poem in randomly order. Repeats are ok, but make sure the number of lines printed is equal to the original lines in the poem (Line numbers do not need to be printed.) Hint: try using a loop and randint() from the random module
@@ -21,27 +21,17 @@ def lines_printed_random(lines_list):
     random.shuffle(lines_list)
     for i in lines_list:
         print(i)
-# lines_printed_random(get_file_lines("Poem.txt"))
+lines_printed_random(get_file_lines("Poem.txt"))
 def lines_printed_custom(lines_list):
     # should print the poem in a unique way, be creative!
     #carefully comment your custom function so it’s clear what it does.
     while True:
         is_sorted = True
-        for index in range(len(arr)-1):
-# lines_printed_custom(get_file_lines("Poem.txt"))
-
-
-
-
-def sorter(arr):
-    while True:
-        is_sorted = True 
-        for index in range(len(arr) - 1):
-            if arr[index] > arr[index + 1]:
+        for line in range(len(lines_list)-1):
+            if lines_list[line] > lines_list[line +1]:
                 is_sorted = False
-                (arr[index], arr[index + 1]) = (arr[index + 1], arr[index])
-
+                (lines_list[line], lines_list[line + 1]) = (lines_list[line + 1], lines_list[line])
         if is_sorted == True:
-            return arr
-            
-print(sorter(get_file_lines("Poem.txt")))
+            return lines_list
+print(lines_printed_custom(get_file_lines("Poem.txt")))
+
