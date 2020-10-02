@@ -25,14 +25,11 @@ def lines_printed_random(lines_list):
 def lines_printed_custom(lines_list):
     # should print the poem in a unique way, be creative!
     #carefully comment your custom function so it’s clear what it does.
-    pass
+    while True:
+        is_sorted = True
+        for index in range(len(arr)-1):
 # lines_printed_custom(get_file_lines("Poem.txt"))
 
-####Stretch########
-#Modify your program to write your poems to a file.
-#Modify your program to have a menu that the user can select from rather than printing all the options at once
-#Modify your program to read the poem from user input
-#Modify your program to randomly rearrange the words on each line
 
 
 
@@ -47,28 +44,4 @@ def sorter(arr):
         if is_sorted == True:
             return arr
             
-
-my_array = [3, 2, 1, 4, 5]
 print(sorter(get_file_lines("Poem.txt")))
-
-
-print(5)
-
-# arr = [a, b, c]
-# range(5) = [0, 1, 2, 3, 4]
-# for index in range(len(arr)): 
-
-
-# a = 5
-# b = 6
- 
-# def swap(a, b):
-#     c = a + b
-#     a = c - a
-#     b = c - b
-#     return (a, b)
-
-# # (a, b) = swap(a, b)
-# a = arr[index]
-# b = arr[index + 1]
-# (a, b) = (b, a)
