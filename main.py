@@ -1,9 +1,10 @@
 import random
 def get_file_lines(filename):
     #return a list of strings containing the lines of the file.
+    print("***THIS IS THE ORIGINAL POEM***")
     file = open(filename, "r")
     return (file.readlines())
-
+get_file_lines("Poem.txt")
 def lines_printed_backwards(lines_list):
     #print the lines of the poem in reverse. Include the original line number at the beginning of each line.
     ####I saw this reverse strategy in stack overflow#####
@@ -27,6 +28,7 @@ def lines_printed_custom(lines_list):
     #carefully comment your custom function so it’s clear what it does.
     while True:
         is_sorted = True
+
         for line in range(len(lines_list)-1):
             if lines_list[line] > lines_list[line +1]:
                 is_sorted = False
